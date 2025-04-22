@@ -49,3 +49,7 @@ for(let i = 0; i < colori.length; i++){
 for(let i = frutti.length - 1; i >= 0; i--){
     console.log(frutti[i]);
 }
+
+colori.forEach(colore => {
+    console.log(colore);
+})
