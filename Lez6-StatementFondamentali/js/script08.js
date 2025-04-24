@@ -2,6 +2,7 @@ let i = 1;
 let msg = "";
 
 //il while fa parte dei cicli indefiniti. Ovvero quei cicli che "girano" finché la condizione è true
+//sto simulando un for
 while(i <= 10){
     let risultato = i * 7;
     msg = `${i} x 7 = ${risultato}`; 

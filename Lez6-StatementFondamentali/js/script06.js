@@ -1,7 +1,7 @@
 //lo switch permette di valutare il valore di una varibile stabilendo dei casi in cui far accadere qualcosa
 
 let msg = "";
-let livello = 100;
+let livello = 2;
 
 switch(livello){
 

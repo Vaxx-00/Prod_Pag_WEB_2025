@@ -9,28 +9,91 @@
 
 // let numeriEstratti = [];
 // let tentativi = 0;
+// let nomeUser = "paolino";
+// let passUser = "stellina96";
 
-// for(let i = 0 ; i < 20; i++){
-//     let numEstratto = Math.ceil(Math.random() * 90);
-//     if(numeriEstratti.includes(numEstratto)){
-//         i--; //fai un altro giro
+// if(nomeUser == "paolino" && passUser == "stellina96"){
+//     let numDaEstrarre = 50;
+//     if(numDaEstrarre <= 90){
+//         for(let i = 1 ; i <= numDaEstrarre; i++){
+//             let numEstratto = Math.floor(Math.random() * 90);
+//             if(numeriEstratti.includes(numEstratto)){
+//                 i--; //fai un altro giro
+//             }else{
+//                 numeriEstratti.push(numEstratto);
+//             }
+//             tentativi++;
+//         }
 //     }else{
-//         numeriEstratti.push(numEstratto);
+//         console.log("Pensavi di fregarmi estraendo più di 90 numeri ? ");
+        
 //     }
-//     tentativi++;
+// }else{
+//     console.log("Mi spiace ma non ti conosco");
+    
+// }
+    
+// console.log(numeriEstratti);
+// console.log("Tentativi eseguiti: " + tentativi);
+
+// let numeriEstratti = [];
+// let giri = 0;
+
+// while(numeriEstratti.length < 90){
+//     let numEstratto = Math.ceil(Math.random() * 90);
+//     if(!numeriEstratti.includes(numEstratto)){
+//         numeriEstratti.push(numEstratto);  
+//     }
+//     giri++;
 // }
 
-//console.log(numeriEstratti);
-//console.log(tentativi);
+// console.log(numeriEstratti);
+// console.log("Giri eseguiti: " + giri);
 
+//SOLUZIONE CON 2 FOR
+
+// let numeriEstratti = [];
+// let giri = 0;
+
+// for(let i = 0; i < 12; i++){
+//     let numEstratto = Math.ceil(Math.random() * 90);
+//     //il for sotto legge l'array, l'if controlla numero per numero
+//     //sto traducendo il metodo includes() con un for e un if
+//     for(let j = 0; j < numeriEstratti.length; j++){
+//         if(numeriEstratti[j] == numEstratto){
+//             continue;
+//         }
+//     }
+//     numeriEstratti.push(numEstratto);
+// }
+// console.log(numeriEstratti);
+
+
+let listaNumeri = [];
+console.log(listaNumeri.splice(1,listaNumeri.length-1));
 let numeriEstratti = [];
-let tentativi = 0;
+let giri = 0;
 
-while(numeriEstratti.length < 10){
-    let numEstratto = Math.ceil(Math.random() * 90);
-    if(numeriEstratti.includes(numEstratto)){
-       continue;
-    }else{
-        numeriEstratti.push(numEstratto);
-    }
+//vado a riempire la mia lista numeri con 90 numeri
+for(let i = 0; i < 90; i++){
+    listaNumeri.push(i + 1);
+    // listaNumeri[i] = i+1;
 }
+console.log(listaNumeri);
+
+//for per estrarre
+for(let i = 0 ; i < 20; i++){
+    let indice = Math.floor(Math.random() * listaNumeri.length); //estrae un indice
+    //adesso inserisco il numero posizionato sull'indice estratto
+    numeriEstratti.push(listaNumeri[indice]);
+    listaNumeri.splice(indice, 1);
+    giri++;
+}
+
+console.log(numeriEstratti);
+console.log(giri);
+
+
+
+
+
