@@ -38,7 +38,7 @@ function stampaListaStudenti(){
 let numeroDocenti = 4;
 console.log("Numero docenti corso : " + numeroDocenti);
 
-document.querySelector("#btn").addEventListener("click", function(){
-    this.classList.toggle("btnRed");
-})
+// document.querySelector("#btn").addEventListener("click", function(){
+//     this.classList.toggle("btnRed");
+// })
     
