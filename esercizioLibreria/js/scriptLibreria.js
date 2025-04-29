@@ -30,9 +30,11 @@ function stampaLibri(){
 function addLibro(){
     //recupero il value del campo input
     let titolo = document.getElementById("titolo").value;
-    libri.push(titolo);
-    if(libreriaAperta){
-        libreria.innerHTML += `<li>${titolo}</li>`; //soluzione di Agustina
+    if(titolo.trim() != ""){
+        libri.push(titolo);
+        if(libreriaAperta){
+            libreria.innerHTML += `<li>${titolo}</li>`; //soluzione di Agustina
+        }
     }
     // stampaLibri();
 }
@@ -55,6 +57,8 @@ function mostraNascondi(){
 
 btnMostra.addEventListener("click", mostraNascondi);
 
+
+//Da Studiare le due funzioni setTimeout() e setInterval()
 function sorteggiaStudente(){
     let indiceStudente = Math.floor(Math.random() * 13);
     if( indiceStudente == 9 ){
@@ -62,6 +66,7 @@ function sorteggiaStudente(){
         setTimeout(() => {
             sorteggiaStudente();
         }, 2000);
+        
     }else{
         console.log(indiceStudente);
     }
