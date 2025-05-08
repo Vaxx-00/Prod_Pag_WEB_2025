@@ -1,0 +1,8 @@
+Elabora un array di film con le seguenti prop (titolo, regista, anno, genere, locandina, attori[])
+
+Stampa in delle card tutti i film e crea un filtro sul genere.
+
+Trasforma tutto in un JSON e stampalo al fondo della pagina cliccando su un pulsante.
+
+OPZIONALE
+Con i film che hai nell'array prova a costruire un carosello.
