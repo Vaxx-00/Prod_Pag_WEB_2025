@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
 
-    <h2>Apocalypse Now</h2>
+    <!-- <h2>Apocalypse Now</h2>
     <img src="./img/apocalypse.jpg" alt="">
     <p>Registra: Francis Ford Coppola</p>
     <ul>
@@ -18,9 +19,33 @@
         <li>Martin Sheen</li>
         <li>Martin Sheen</li>
     </ul>
+    <button>Indietro</button> <button>Avanti</button> -->
 
-    <button>Indietro</button> <button>Avanti</button>
+    <h1>Cinema Immaginazione e Lavoro</h1>
+    
+    <p>Scegli il genere: </p>
+    <select name="" id="genereSel">
+        <option value="Tutti">Tutti</option>
+        <option value="Fantastico">Fantastico</option>
+        <option value="Storico">Storico</option>
+    </select>
+    <button id="btnSel">Scegli</button>
 
-    <script src="./script.js"></script>
+    <div id="boxFilms"></div>
+
+    <div class="clear"></div>
+
+    <button id="btnJSON">Stampa JSON</button>
+    <div id="boxJSON"></div>
+
+    <h1>Carosello</h1>
+
+    <div id="boxCarosello">
+
+    </div>
+    <button id="btnIndietro">Prev</button>
+    <button id="btnAvanti">Next</button>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
