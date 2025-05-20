@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Dario",
+      "last_name": "Mennillo",
+      "email": "dario@mail.com",
+      "img": "./img/dario.jpg"
+    },
+    {
+      "id": 2,
+      "first_name": "Anna",
+      "last_name": "Rossi",
+      "email": "anna@mail.com",
+      "img": "./img/anna.jpg"
+    },
+    {
+      "id": "e3a4",
+      "first_name": "Paolo",
+      "last_name": "rOSSI",
+      "email": "rossi@mail.com",
+      "img": "./img/vattelapesca.jpg"
+    }
+  ],
+  "author": "Programmer 1",
+  "corso": {
+    "nome": "Tecnico gestione siti web",
+    "scuola": "I&L"
+  }
+}
