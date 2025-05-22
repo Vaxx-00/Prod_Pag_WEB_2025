@@ -22,9 +22,33 @@ let demo = document.querySelector("#demo");
  */
 function stampaUtenti(utenti){
     utenti.forEach(utente =>{
-        demo.innerHTML += "<li>" + utente.first_name + " " + utente.last_name + "</li>";
+        // demo.innerHTML += "<li>" + utente.first_name + " " + utente.last_name + "</li>";
+        let li = document.createElement("li");
+        li.textContent = utente.first_name + " " + utente.last_name;
+        li.addEventListener("click", function(){
+            registraInLocal(utente);
+        })
+        demo.appendChild(li)
     })
 }
+
+//Questa funz si occueperà di salvare l'utente sul quale abbiamo fatto click nella localstorage
+function registraInLocal(utente){
+    console.log("Sto salvando in local ", utente);
+    let userDaSalvare = JSON.stringify(utente);
+    //                              key            value
+    localStorage.setItem("user Selezionato", userDaSalvare)
+}
+
+function recuperaUserSelezionato(){
+    //                                                      key
+    let userSalvato = JSON.parse(localStorage.getItem("user Selezionato"));
+    console.log(userSalvato);
+    
+}
+
+let btnRecuperaUser = document.querySelector("#btnRecuperaUser");
+btnRecuperaUser.addEventListener("click", recuperaUserSelezionato);
 
 class Utente{
     constructor(nome, cognome, email){
