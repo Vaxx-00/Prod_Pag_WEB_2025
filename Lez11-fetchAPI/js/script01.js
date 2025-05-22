@@ -2,6 +2,7 @@
 let mieiDati = "";
 //1. UTILIZZO DEL METODO FETCH - BENVENUTI NELLA PROGRAMMAZIONE ASINCRONA (ajax)
 //OSS:  il metodo fetch sarà sempre l'ultima cosa che verrà eseguita nel vostro codice indipendentemente da dove lo posizionate
+//Se non esplicito nulla nella fetch, di default è un metodo GET
 fetch("https://jsonplaceholder.typicode.com/users/")
     .then(data => {
         console.log(data); //data è la risposta del server
@@ -9,7 +10,7 @@ fetch("https://jsonplaceholder.typicode.com/users/")
         return data.json(); //data.json() -> raccoglie il body del mia request e la trasforma da json() ad oggett
     })
     .then(response =>{
-        //Response è il mio arrey di oggetti
+        //Response è il mio array di oggetti
         //Qui raccolgo i dati
         console.log(response);
         mieiDati = response;
