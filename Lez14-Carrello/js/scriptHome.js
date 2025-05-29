@@ -74,14 +74,9 @@ function creaCard(prodotto){
     }
 
     btn.addEventListener("click",  function(){
-        try {
-            postInCarrello(prodotto);    
-        } catch (error) {
-            console.log(error);
-            
-        }finally{
 
-        }
+        postInCarrello();
+
         // prezzo.innerHTML = "..sto aggiungendo al carrello";  
         // setTimeout(() => {
         //     prezzo.textContent = "Prezzo: €" + prodotto.prezzo;
