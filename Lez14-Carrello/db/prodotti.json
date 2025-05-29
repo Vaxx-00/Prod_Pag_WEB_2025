@@ -5,73 +5,90 @@
       "descrizione": "Un potente smartphone con fotocamera avanzata e lunga durata della batteria.",
       "prezzo": 799.99,
       "immagine": "./img/smartphone.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "b22d"
     },
     {
       "nome": "Laptop Ultrabook",
       "descrizione": "Portatile sottile e leggero, ideale per produttività in movimento.",
       "prezzo": 1249,
       "immagine": "./img/laptop.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "fe24"
     },
     {
       "nome": "Smart TV 4K 55\"",
       "descrizione": "Esperienza visiva mozzafiato con risoluzione 4K e funzionalità smart.",
       "prezzo": 649.5,
       "immagine": "./img/smarttv.jpg",
-      "disponibilita": false
+      "disponibilita": false,
+      "id": "012f"
     },
     {
       "nome": "Cuffie Wireless Cancellazione Rumore",
       "descrizione": "Audio immersivo e cancellazione attiva del rumore per la massima concentrazione.",
       "prezzo": 199.99,
       "immagine": "./img/cuffie.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "38f3"
     },
     {
       "nome": "Smartwatch Fitness",
       "descrizione": "Monitora la tua attività fisica e le notifiche direttamente dal polso.",
       "prezzo": 129.9,
       "immagine": "./img/smartwatch.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "23ff"
     },
     {
       "nome": "Altoparlante Bluetooth Portatile",
       "descrizione": "Suono potente e design compatto per portare la musica ovunque.",
       "prezzo": 89,
       "immagine": "./img/altoparlante.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "21cf"
     },
     {
       "nome": "Tablet Android 10\"",
       "descrizione": "Perfetto per navigare, leggere e guardare video con uno schermo brillante.",
       "prezzo": 299.99,
       "immagine": "./img/tablet.jpg",
-      "disponibilita": false
+      "disponibilita": false,
+      "id": "0245"
     },
     {
       "nome": "Fotocamera Digitale Mirrorless",
       "descrizione": "Cattura foto e video di qualità professionale con facilità.",
       "prezzo": 899,
       "immagine": "./img/fotocamera.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "590e"
     },
     {
       "nome": "Console da Gioco Next-Gen",
       "descrizione": "Immergiti in mondi di gioco realistici con grafica di nuova generazione.",
       "prezzo": 499,
       "immagine": "./img/console.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "2962"
     },
     {
       "nome": "Router Wi-Fi Mesh",
       "descrizione": "Copertura Wi-Fi estesa e stabile per tutta la casa, senza zone morte.",
       "prezzo": 159.9,
       "immagine": "./img/router.jpg",
-      "disponibilita": true
+      "disponibilita": true,
+      "id": "d723"
     }
   ],
   "carrello": [
-   
+    {
+      "id": "fe24",
+      "nome": "Laptop Ultrabook",
+      "descrizione": "Portatile sottile e leggero, ideale per produttività in movimento.",
+      "prezzo": 1249,
+      "immagine": "./img/laptop.jpg",
+      "disponibilita": true
+    }
   ]
 }

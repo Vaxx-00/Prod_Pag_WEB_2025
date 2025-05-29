@@ -67,15 +67,36 @@ function creaCard(prodotto){
 
     let btn = document.createElement("button");
     btn.setAttribute("class", "btn btn-primary bi bi-cart");
+
     
     if(!prodotto.disponibilita){
         btn.setAttribute("disabled", true);
     }
 
-    btn.addEventListener("click", function(){
-        //fetch POST su carrello
-        postInCarrello(prodotto);
-    });
+    btn.addEventListener("click",  function(){
+        try {
+            postInCarrello(prodotto);    
+        } catch (error) {
+            console.log(error);
+            
+        }finally{
+
+        }
+        // prezzo.innerHTML = "..sto aggiungendo al carrello";  
+        // setTimeout(() => {
+        //     prezzo.textContent = "Prezzo: €" + prodotto.prezzo;
+        // }, 2000);   
+        
+        btn.classList.remove("bi");
+        btn.classList.remove("bi-cart");
+        btn.textContent = "Sto aggiungendo al carrello";
+
+        setTimeout(() => {
+            btn.classList.add("bi");
+            btn.classList.add("bi-cart");
+            btn.textContent = "";
+        }, 2000);
+     });
 
     col.appendChild(card);
     card.appendChild(cardImg);
@@ -92,17 +113,32 @@ function creaCard(prodotto){
 }
 
 
-function postInCarrello(prodotto){
-    const URL = "http://localhost:3000/carrello";
-    fetch(URL, {
+// function postInCarrello(prodotto){
+//     const URL = "http://localhost:3000/carrello";
+//     fetch(URL, {
+//         method: "POST",
+//         headers:{
+//             "Content-type": "application/json"
+//         },
+//         body: JSON.stringify(prodotto)
+//     })
+//     .then(data =>{
+//         console.log("prodotto aggiunto", data);
+//     })  
+// }
+
+
+//Con Async Await
+async function postInCarrello(prodotto) {
+    const response = await fetch("http://localhost:3000/carrello", {
         method: "POST",
         headers:{
             "Content-type": "application/json"
         },
         body: JSON.stringify(prodotto)
     })
-    .then(data =>{
-        console.log("Prodotto inserito");
-        return data.json();
-    })
+
+    const data = await response.json();
+    console.log("prodotto aggiunto", data);
+
 }
