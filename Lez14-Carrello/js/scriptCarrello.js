@@ -13,10 +13,11 @@ function scaricaDatiCarrello(){
             listItem.setAttribute("class", "list-group-item");
             listItem.textContent = prod.nome;
             listaProdCarrello.appendChild(listItem);
-            listItem.onclick = function(){
+            listItem.addEventListener("click", function(){
                 console.log(prod.id);
+                location.href = `singoloProdotto.html?id=${prod.id}`;
                 
-            }
+            })
         });
     })
 }

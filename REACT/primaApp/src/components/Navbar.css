@@ -1,0 +1,21 @@
+ul{
+    color: red;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.stileDiv {
+    width: 200px;
+    height: 200px;
+    border: 2px dotted black;
+    background-color: aquamarine;
+}
+
+.rotated {
+    width: 200px;
+    height: 200px;
+    rotate: 40deg; 
+    background-color: orangered;   
+}
