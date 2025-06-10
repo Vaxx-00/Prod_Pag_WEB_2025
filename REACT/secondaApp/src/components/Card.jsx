@@ -29,9 +29,12 @@
 function Card({title, description, imgURL}){
 
     //In questo caso non ho più necessità di definire le proprietà 
-    // const title = props.title;
+   // const title = props.title;
     // const description = props.description
     // const imgURL = props.imgURL;
+    if(title == undefined){
+        title = "Questo è quello che metto quando manca il titolo"
+    }
 
     return(
         <>
