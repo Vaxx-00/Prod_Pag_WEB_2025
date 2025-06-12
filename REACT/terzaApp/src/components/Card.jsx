@@ -1,4 +1,4 @@
-function Card({title, description, imgURL}){
+function Card({title, description, imgURL, isScelto}){
 // inserisci isSelezionato con lo span
 
     if(title == undefined){
@@ -16,6 +16,8 @@ function Card({title, description, imgURL}){
                     <h2>{title}</h2>
                     <p>{description}</p>
                 </div>
+
+                {isScelto ? <span> Luogo selezionato</span> : <span> Luogo non selezionato </span>}
 
             </div>
         </>

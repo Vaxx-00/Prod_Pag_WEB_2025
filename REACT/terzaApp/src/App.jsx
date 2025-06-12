@@ -1,9 +1,11 @@
 import './App.css'
 import CardForm from './components/CardForm'
+import Card from './components/Card'
+import { useState } from 'react';
 
 
 function App() {
-  const luoghi = [
+  const [luoghi, setLuoghi] = useState ([
     {
       id:0,
       title: "Mare",
@@ -25,13 +27,15 @@ function App() {
       description: "La montagna della montagna",
       imgURL: "https://picsum.photos/200?3"
     }
-  ];
+  ]);
 
   //STEP 1. creo una funzione per aggiungere un nuovo  luogo
   //Step 2. Questa funz verrà però utilizzata dal Child usando il principio dei props
-  let addLuogoParent = (nuovoLuogo)=>{
-    luoghi.push(nuovoLuogo)
-    console.log(luoghi);
+  let addLuogo = (nuovoLuogo)=>{
+    // luoghi.push(nuovoLuogo)
+    // console.log(luoghi);
+
+    setLuoghi([...luoghi, nuovoLuogo]);
 
   }
   //addLuogoParent chiamasi variabile funzionale
@@ -42,9 +46,24 @@ function App() {
       {/* In questo div inserisco il form per l'aggiunta di un luogo */}
                 {/*riferimentoDelPropNelChild = {riferimentoParent}  */}
         <CardForm 
-          addLuogoChild={addLuogoParent}>
-
+          addLuogo={addLuogo}>
         </CardForm>
+     </div>
+
+     <div className="card-container">
+      {
+      luoghi.map(luogo => (
+        <Card
+          key={luogo.id}
+          title={luogo.title}
+          description={luogo.description}
+          imgURL={luogo.imgURL}
+          isScelto={luogo.isScelto}
+        ></Card>
+      ))
+      }
+
+
      </div>
     </>
   )
