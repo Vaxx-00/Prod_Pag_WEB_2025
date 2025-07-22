@@ -11,7 +11,14 @@ function scaricaDatiCarrello(){
         response.forEach(prod => {
             let listItem = document.createElement("li");
             listItem.setAttribute("class", "list-group-item");
-            listItem.textContent = prod.nome;
+            listItem.textContent = prod.nome + " " + prod.prezzo + " € ";
+            
+            let img = document.createElement("img");
+            img.setAttribute("src", prod.immagine);
+            img.setAttribute("style", "width: 50px");
+
+            listItem.appendChild(img);
+
             listaProdCarrello.appendChild(listItem);
             listItem.addEventListener("click", function(){
                 console.log(prod.id);

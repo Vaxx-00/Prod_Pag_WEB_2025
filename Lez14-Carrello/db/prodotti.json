@@ -83,12 +83,16 @@
   ],
   "carrello": [
     {
-      "id": "fe24",
-      "nome": "Laptop Ultrabook",
-      "descrizione": "Portatile sottile e leggero, ideale per produttività in movimento.",
-      "prezzo": 1249,
-      "immagine": "./img/laptop.jpg",
-      "disponibilita": true
+      "id": "38f3",
+      "nome": "Cuffie Wireless Cancellazione Rumore",
+      "prezzo": 199.99,
+      "immagine": "./img/cuffie.jpg"
+    },
+    {
+      "id": "590e",
+      "nome": "Fotocamera Digitale Mirrorless",
+      "prezzo": 899,
+      "immagine": "./img/fotocamera.jpg"
     }
   ]
 }

@@ -75,7 +75,13 @@ function creaCard(prodotto){
 
     btn.addEventListener("click",  function(){
 
-        postInCarrello();
+        let prodPerCarrello = {
+            id: prodotto.id,
+            nome: prodotto.nome,
+            prezzo: prodotto.prezzo,
+            immagine: prodotto.immagine
+        }
+        postInCarrello(prodPerCarrello);
 
         // prezzo.innerHTML = "..sto aggiungendo al carrello";  
         // setTimeout(() => {
@@ -132,8 +138,6 @@ async function postInCarrello(prodotto) {
         },
         body: JSON.stringify(prodotto)
     })
-
     const data = await response.json();
     console.log("prodotto aggiunto", data);
-
 }
